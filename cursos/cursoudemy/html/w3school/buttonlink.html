@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <style>
+        a:link {
+            color: green;
+            background-color: transparent;
+            text-decoration: none;
+        }
+
+        a:visited {
+            color: pink;
+            background-color: transparent;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: red;
+            background-color: transparent;
+            text-decoration: underline;
+        }
+
+        a:active {
+            color: yellow;
+            background-color: transparent;
+            text-decoration: underline;
+        }
+
+        a:link, a:visited {
+            background-color: #f44336;
+            color: white;
+            padding: 15px 25px;
+            text-align: center;
+            text-decoration: none;  /*sem sublinhar*/
+            display: inline-block;
+        }
+
+        a:hover, a:active {
+            background-color: rgb(98, 0, 255);
+        }
+    </style>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>Links</h1>
+
+    <a href="https://www.w3schools.com/" target="_blank">Visit W3Schools!</a>
+
+    <br>
+
+    <h2> Link para uma foto</h2>
+
+    <a target="_blank"
+        href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.mundodoqueijo.com.br%2Fqueijo-canastra%2Fqueijo-branco-fresco-canastra-1-kg&psig=AOvVaw2zRix05LBlXICKHswDHN8a&ust=1682019311162000&source=images&cd=vfe&ved=0CAQQjB1qFwoTCPiLnK7Ytv4CFQAAAAAdAAAAABAE">
+        <img src="data:image/jpeg;base64,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"
+            alt="HTML tutorial" style="width: 150px;height: 150;">
+    </a>
+
+    <h3> Link para um email</h3>
+
+    <a target="_blank" href="mailto:juliocesar.gm6000@gmail.com">mande email</a>
+
+    <br>
+
+    <button>
+        <a target="_blank"
+            href="https:/www.estadao.com.br/paladar/quanto-vale-um-queijo-quente-restaurante-americano-cobra-mais-de-1000-reais-por-sanduiche/">
+            top 100 queijos</a></button>
+
+    <a href="https://www.w3schools.com/html/" title="Go to w3schools HTML section">Visit our HTML tut</a>
+
+    <hr>
+
+    <h1>Link Colours</h1>
+
+    <!--An unvisited link is underlined and blue
+        A visited link is underlined and purple
+        An active link is underlined and red
+
+        a:link - unvisited link
+        a:visited - visited link
+        a:hover - mouses over link
+        a:active - moment link clicked
+    -->
+
+</body>
+
+</html>
