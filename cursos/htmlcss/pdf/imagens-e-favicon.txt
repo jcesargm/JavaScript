@@ -1,0 +1,16 @@
+    Veja exercicios/ex003/index.html -> pois é o complemento disso aqui
+    
+    Não podemos usar imagens que encotramos na internet, por terem direitos autorais, então podemos usar imagens nossas, ou podemos buscar o direito de usar a imagem, autorização legal, ou usar imagens de domínio público (essas voce pode colocar no seu site).
+    -> e essas imagens de domínio público você pode encontrar em sites como (unSplash, Pexels, FreePik...)
+
+    -> Existem vários formatos de imagem, cada um com suas caracteristicas, mas vamos focar no jpeg e png.
+    JPEG -> usado para gerar imagens fotograficas com tamanho extremamente reduzido.
+    JPG (formato JPEG) -> a grande vantagem é gerar arquivos muito pequenos e que ocupam pequeno espaço em disco. Isso é muito importante pois quando coloca um site no ar, prezamos por ele ser leve e carregar a imagem rapidamente. Porém cuidado para não exagerar na compactação pois a qualidade da foto pode ficar horrivel.
+    PNG -> o que diferencia ele do JPEG é a capacidade de configurar a opacidade de cada pixel (deixa-lo transparente ou com transparência limitada)
+
+    JPEG -> 120KB
+    PNG -> 300KB
+
+    Na hora de escolher o formato de imagem para o seu site, ope sempre pelo JPEG com compactação entre 30% e 50%. PNG só será usado quando precisarmos de transparência na foto.
+
+    Regra de ouro -> use imagens do tamanho certo, se uma imagem precisa de 200 pixeis, gera um arquivo de 200 pixeis

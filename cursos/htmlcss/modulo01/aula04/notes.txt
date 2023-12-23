@@ -1,0 +1,31 @@
+    História da internet
+
+    Internet -> surgiu na guerra fria(1969)
+    -> Estados Unidos criaram a ARPANET, para fazer um backup gigante para não correrem riscos de perderem tudo. 
+    -> Criaram o NCP (Protocolo de controle de rede), para computadores de linguagens diferentes conseguirem falarem entre si, para isso
+    o NCP falava uma linguagem unica, porém era bem básico, tinha que parar a rede para fazer uma transmissao.
+    -> Para acabar com esse problema, criaram o protocolo TCP, que a ideia era eliminar o problema do NCP, porém ele tinha um problema de
+    -> identificação dos pontos, ai veio outra pessoa e criou outro protocolo de identificação (IP), ai juntaram os dois protocolos = TCP/IP.
+    -> usado ate hoje.
+    -> a ARPANET estava sendo usada por faculdades, centros militares, empresas... Então decidiram separar tudo.
+    Rede Militar -> MILNET
+    Rede Universidade (Ciência) -> NSFNET (NSF -> fundação de apoio a ciência)
+    Rede Comercial -> Comerciais
+    -> todas essas redes queriam se comunicar, queriam uma rede de intercomunicação entre elas, chamada de Interconnect Newtworking
+    -> Abreviado fica Internetworking (conjunto de redes), pra depois surgir um termo isolado "Internet"
+    Internet -> vem da ARPANET que surgiu durante a guerra para proteger centros militares.
+    -> A internet conecta os continentes por meios de cabos por baixo da agua.
+    
+    -> como funciona a comunicação entre pontos? Como eu transfiro dados do ponto A pro ponto B? -> Exemplo: Temos o pc da nossa casa (ponto A)
+    e temos o pc que queremos acessar (ponto B) 
+    Ponto A -> Cliente 
+    Ponto B -> Servidor (o que disponibiliza a midia)
+    -> o ponto A quer uma foto e o ponto B tem a foto, o "A" vai solicitar essa foto, para o "B" mandar essa foto, não pode enviar a imagem 
+    inteira pois a internet mundial pode ficar lenta, então oq o tcp/ip faz? o IP identifica os dois pontos, o tcp quebra a imagem em varios 
+    pacotes, e mandará esses pacotes totalmente fora de ordem em rotas diferentes... Porém no final todos pacotes estarão no seu computador,
+    o tcp do servidor quebrou a imagem e o tcp do cliente é responsavel por reunir todas esses pacotes e reconstruir a imagem.
+
+    
+
+    Protocolo -> Linguagem unica que todos conseguiram falar
+    

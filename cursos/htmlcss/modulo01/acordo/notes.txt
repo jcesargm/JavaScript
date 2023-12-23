@@ -1,0 +1,10 @@
+modulo01 -> (Primeiros passos) Conceitos básicos, preparação do ambiente semântica do HTML5, textos, títulos, ligações, multimídia, estilos.
+modulo02 -> (Deixando as coisas mais bonitas) -> Fundamentos do design, psicologia das cores, tipografia, elementos CSS, modelo de caixas,
+            wireframe, responsividade.
+modulo03 -> (Colocando um protótipo no ar) -> Versionamento de software, hospedagem de sites estáticos, tabelas.
+modulo04 -> (Aprofundamento dos conhecimentos) -> Quadros em linha, formulários, media queries, mobile first.
+modulo05 -> (Novas tecnologias) -> Flexbox, Grid Layout, projeto final.f
+
+ repositório do curso: 
+  -> github.com/gustavoguanabara
+  -> gustavoguanabara.github.io
