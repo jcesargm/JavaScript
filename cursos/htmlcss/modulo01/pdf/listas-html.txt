@@ -1,4 +1,8 @@
+    Para complemento veja o ex009
 
+  <ol></ol> -> lista ordenadas (tipos = i, I, a, A, 1)                | Os dois usam <li></li> (list item)
+  <ul></ul> -> lista não ordenadas (tipos = square, circle, e padrão) | Os dois usam <li></li> (list item)
+  <dl></dl> -> lista de definições (<dt></dt> = termo) (<dd></dd> = definição do termo)
 
     Listas
 -> Facilitam a leitura, organizam o conteúdo.
@@ -81,3 +85,30 @@ ex: <ul type="square"> </ul>
 
 -> as linhas da lista interna são deslocadas para a direita, por serem sub-listas.
 -> Também podemos misturar os dois tipos de listas <ol> e <ul>, sendo as sub-listas sempre deslocadas para a direita.
+
+    Lista de Definições: 
+-> É como se fosse um dicionario, todos os termos e suas descrições.
+-> toda lista de definições está dentro da tag <dl></dl> (definition list)
+-> Cada termo é um <dt> (definition term)
+-> Cada descrição é um <dd></dd> (definition description)
+-> as tags dt e dd tem fechamento opcional.
+
+<dl>
+    <dt>HTML</dt>
+    <dd>Linguagem de marcação utilizada para criar o conteúdo de sites.</dd>
+
+    <dt>CSS</dt>
+    <dd>Linguagem de marcação para a especificação de estilos de sites.</dd>
+
+    <dt>JavaScript</dt>
+    <dd>Linguagem de programação para criar interatividade em sites.</dd>
+</dl>
+
+    RESULTADO:
+
+HTML
+    Linguagem de marcação utilizada para criar o conteúdo de sites.
+CSS
+    Linguagem de marcação para a especificação de estilos de sites.
+JavaScript
+    Linguagem de programação para criar interatividade em sites.

@@ -1,0 +1,42 @@
+
+
+    Hyperlinks:
+-> Permitem que você ligue um ponto a outro no world wide web.
+-> Mecanismos de buscas também usam os Hyperlinks para achar determinado site, vasculhando todos os outros sites procurando links para descobrir novos conteudos.
+
+-> Para criar um hyperlink devemos criar âncoras pela tag <a> e o parâmetro href que guarda o link.
+<a href="url do github">Acesse meu perfil do github </a>
+
+-> outro parâmetro(atributo) é hreflang, que indica o principal idioma do site que o link está te levando, permitindo o navegador a traduzir automaticamente os conteúdos.
+<a href="url do w3schools" hreflang="en">Acesse a w3schools</a>
+
+-> sempre que clicamos em um hyperlink, a página que estavamos irá sumir e a nova irá ocupar o lugar da antiga,
+   para poder controlar isso, usamos o atributo target, que suporta os seguintes valores:
+_blank -> vai abrir o link numa nova janela em branco
+_self -> vai abrir o link na janela ou frame atual (padrão)
+
+-> tem mais o _top e o _parent, mas estão em desuso.
+<a href="pagina2.html" target="_self">Continuar navegando no site</a>
+<a href="github.com" target="_blank">Abrir meu perfil do github em uma nova janela</a>
+
+-> Mais um recurso dos links é para indicar qual é de quem é o link, usando o atributo "rel", aceitando vários valores:
+next     -> indica que o link é para a próxima parte do documento atual
+prev     -> indica que o link é para uma parte anterior do documento atual
+author   -> indica que o link é para o site do autor do artigo atual
+external -> indica que é um link para outro site que não faz parte do site atual
+nofollow -> indica que é um link para um site não endossado, como um link pago
+-> exemplo:
+<a href="pagina2.html" target="_self" rel="next">
+-> chamado de link local/link interno ja que ele leva o visitante a outra página dentro do nosso próprio site.
+<a href="github.com" target="_blank" rel="external">Abrir meu perfil do github em uma nova janela</a>
+-> chamado de link externo, por nos levar a outro site.
+
+-> o interno nem precisa ter a URL inteira por estar dentro do próprio site, mas o externo tem que estar completo inclusive com o protocolo http://
+
+ -> Para fazer o link te mandar para efetuar um download, basta colocar fazer o link diretamente para o arquivo que deseja fazer o download
+-> adicionar o atributo download com o valor configurado para o nome do arquivo a ser baixado 
+-> adicionar o atributo type para indicar ao navegador que tipo de arquivo está sendo baixado.
+<a href="arquivos/meulivro.pdf" download="meulivro.pdf" type="application/pdf"> Baixe meu livro</a>
+ -> alguns types usado no dia a dia:
+    application/zip || text/html || text/css || text/javascript || video/mp4 || video/H264 || video/JPEG 
+    audio/aac || audio/mpeg || font/ttf || image/jpeg || image/png
