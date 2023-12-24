@@ -1,0 +1,58 @@
+    Para complemento, veja exercicios/ex007/todos e exercicios/ex008/todos
+
+semântica-> maior mudança do html4 pro html5 foi o acrescimo da semantica aos elementos
+
+Por exemplo no HTML4 as tags não tinham um significa embutido muito forte, como a de sublinhar.
+HTML4 -> <u>Rua Marques de Lira Filho</u>
+HTML5 -> <address>Rua Marques de Lira Filho</address>
+E no HTML5 suas tags tentam levar um significa embutido
+
+Use CSS para fazer que um endereço apareça sublinhado e o HTML para dar sentido ao conteúdo.
+
+<b> </> e <strong> </> -> negrito (use strong)
+<address> </> </> -> sublinhado
+<em> -> itálico
+
+strong -> indica que o termo tem força dentro da frase
+em -> significa que queremos dar ênfase ao termo
+
+Ja percebemos que as tags tem mais sentido que as antigas <b> <i>
+
+ marca texto (<mark> </mark>) -> enfâse descomunal, trecho muito valioso pra você
+-> Para usar outras cores de marca texto, é só utilizar do css
+
+tag para deixar o texto menor -> <small></>
+tag para deixar o texto maior -> deletada do HTML5
+
+texto deletado (com risco no meio) -> <del></> -> significa que o texto está ali, pode até ser lido mas deve ser desconsiderado
+texto inserido -> oposto do deletado -> sublinhar -> <u></>
+
+Quando quiser usar raiz quadrada ou escrever H2O com o 2 pequeno e la em baixo: (sub & sup)
+2<sub>2</sub> -> 2^2
+H<sup>2</sup>O -> H2O
+
+Trechos de código: (<pre>) (<code>)
+-> Valor semântico, efeito visual pois as letras ficam mono-espaçadas(monospace) facilitando a leitura do código
+-> Porém ainda não está completo ainda, para ficar completo e deixar as letras mono-espaçadas, usaremos a tag <pre>
+-> A tag pre, ela deixa o texto exatamente da mesma forma que a gente escreveu incluindo quebra de linhas, espaços e tabulações.
+-> Ficaria:
+    <pre><code> </code></pre>
+
+ Citações: (<q></>) (<blockquote></>)
+ -> Citação é um trecho de um texto escrito ou dito por outra pessoas que vai ilustrar perfeitamente algo que você quer explicar.
+ -> Normalmente uma citação aparece entre aspas ou com as margens deslocadas em relação ao texto.
+ -> <q></q> -> fazer citação com essa tag vai colocar as aspas porém sem deslocação (mais usada em citação no meio do paragrafo)
+ -> <blockquote></> -> Usada para citações mais longas (em blocos), também podemos colocar um link para o texto original, usando o parâmetro "cite" dentro da tag, ficando:
+    <blockquote cite="link"> citação </blockquote>
+
+ Abreviações: <abbr>
+-> Sempre que quiser escrever uma sigla mas deixar claro ao usuário(e aos mecanismos de busca) o significado dela, use a tag <abbr>
+-> exemplo:
+ <p>Eu estou estudando <abbr title="Hyper Text Markup Language">HTML</abbr> para criar sites.</p>
+
+  Inverter texto: <bdo>
+-> ao usar essa tag coloque também o parâmetro dir para indicar uma das duas direções possíveis:
+rtl = da direita para a esquerda (right-to-left)
+ltr = da esquerda para a direita (left-to-right)
+-> exemplo:
+<bdo dir="rtl">Este texto todo está invertido no formato RIGHT-TO-LEFT.</bdo>
