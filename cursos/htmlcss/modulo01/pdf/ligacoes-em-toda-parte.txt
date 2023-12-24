@@ -1,4 +1,4 @@
-    Para complemento exercicios/ex010
+    Para complemento exercicios/ex010 | desafios 06 e 07
 
     Hyperlinks:
 -> Permitem que você ligue um ponto a outro no world wide web.
