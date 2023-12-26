@@ -1,4 +1,49 @@
+    Para complemento veja o exercicios/ex013/014/015
 
+    CSS (Cascading Style Sheets)
 
-    CSS
-->
+    A forma mais simples de aplicar estilos: CSS inline Style
+ ->  A forma mais básica de aplicar o css em áreas pontuais em nosso siste é usar o css dentro de parâmetros  de HTML5.
+ -> Para mudar o corpo da página(<body>):
+<body style="font-family: Arial, Helvetica, sans-serif; color: blue;">
+ -> agora mudar o <h1>:
+<h1 style="color: red;"> Capítulo 1</h1>
+-> Porém só irá mudar 1 dos h1, não todos da página pois estamos fazendo configurações pontuais.
+
+    A forma mais interessante: CSS internal Style
+ -> Para essa adicionamos uma tag <style></> dentro da tag <head>:
+<head>
+<style>
+  body {
+ font-family: Arial, Helvetica, sans-serif;
+ background-color: lightcyan;
+ color: blue;
+ }
+  h1 {
+ color:green;
+ }
+</style>
+</head>
+-> As configurações pontuais do CSS vão prevalecer sobre as configurações gerais
+
+    A forma mais versátil: CSS external Style
+ -> Mantem a folha de estilo fora do codigo HTML, da uma maior organização, para isso usamos a tag link especialmente configurada para trabalhar com arquivos externos de estilo. Link deve ser colocado dentro da área <head>
+ <head>
+  <title></title>
+  <link rel="stylesheet" href="style.css"
+ </head> 
+
+-> a técnica inline style deve ser evitada
+-> a técnica internal style organiza melhor seu código. Use qando quando for criar páginas isoladas com estilos próprios, que não serão replicados em outras páginas.
+-> a técnica exertenal style sempre que seu css for usado em varias páginas use-o. Usando a tag link em varias páginas elas podem ter o mesmo estilo entre elas não precisando ficar alterando varios arquivos se precisar mudar algo.
+
+CSS externo = use sempre que puder
+CSS interno = use para pequenas configurações
+CSS inline = procure evitar
+
+-> tudo dentro do style=""
+font-family: Arial; -> fonte do texto
+background-color: cor; -> cor do fundo 
+color: cor  -> cor da letra
+text-align: justify -> deixar o conteudo o conteudo de um paragrafo certinho
+font-size: 20px/2em; -> tamanho da fonte 
