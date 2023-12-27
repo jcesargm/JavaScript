@@ -1,0 +1,92 @@
+
+
+    O que é uma caixa? (box model)
+-> a grande maioria dos elementos HTML são como caixas. São containers que armazenam conteudos ou até mesmo outras caixas.
+
+    Anatomia de uma caixa
+-> Tudo começa a partir do conteúdo (content), por padrão toda caixa é composta apenas pelo conteudo não possuindo padding, nem border, nem outline, e nem margin. Uma exceção para o body que vem com margin de 8px.
+
+-> Todo conteudo possui uma largura (width) e uma altura (height) e a esse conjunto de propriedades damos o nome de box-size (tamanho da caixa). o box-size não inclui as medidas de padding, border, outline e margin.
+
+-> Depois do conteudo e seu tamanho, vamos nos focar na borda que fica em volta dele. Ela pode ter espessura, uma cor e um formato.
+
+-> Entre a borda e o conteudo (da borda pra dentro) temos o preenchimento (padding) e da borda pra fora temos a margem(margin).
+
+-> Entre a margem e a borda, podemos determinar o contorno (outline) que é pouco utilizado, mas existe. É um traçado visual que podemos criar fora da borda e o calculo da sua espessura faz parte da margem estabelecida.
+
+ EXEMPLO!
+ <style> 
+
+    h1{
+        width: 300px;
+        height: 50px;
+        background-color:lightgray;
+        border-width: 10px;
+        border-style: solid;
+        border-color: red;
+        padding: 20px;
+        outline-width: 30px;
+        outline-style: solid;
+        outline-color: blue;
+        margin: 50px;
+    }
+
+ </style>
+
+ -> Todas essas configurações serão aplicadas no elemento <h1> que é uma caixa, as linhas 21 e 21 configuraram o size da caixa (largura e altura) fará que ela tenha 300x50
+ -> As linhas 24 a 26 configuram uma borda sólida, vermelha e com 10 pixeis de espessura
+ -> a linha 27 criará um espaço interno de preenchimento (da borda p dentro) de 20 pixels no elemento e a linha 31 vai criar um espaço externo (da borda pra fora) de 50 pixels
+ -> As linhas 28 a 30 vão usar parte da margem para criar um contorno azul sólido e com 30 pixel de espessura
+
+ -> border = 10px | outline = 30px | padding = 20px | margin 50px | width - 300
+ -> Para contar a largura total, temos que multiplicar tudo isso por dois menos a largura, e somar com a largura(width). Resultaria em 460, pois não contamos com o outsize que ja faz parte da margem.
+ -> Temos que multiplicar por dois pois são dois lados da caixa.
+
+    Simplificar
+-> também tem as shorthands, com a mesma ordem. largura(width), estilo(style), e cor(color)
+
+        border-width: 10px;  |
+        border-style: solid; | -> border: 10px solid red;
+        border-color: red;   |
+
+        outline-width: 30px;  |
+        outline-style: solid; | -> outline: 30px solid blue;
+        outline-color: blue;  |
+
+    Preenchimento e margem personalizados:
+-> Todo elemento da caixa possui quatro valores pra padding e quatro para margin, sempre na ordem:
+ superior(top) -> direita(right) -> inferior(bottom) -> esquerda(left)
+-> qnd colocamos um unico valor de dimensão para preenchimento ou margem ele é aplicado simetricamente a todas direçoes.
+
+        padding-top: 10px;    |-
+        padding-right:15px;   | -> padding: 10px 15px 20px 25px; 
+        padding-bottom: 20px; |-
+        padding-left: 25px;   |-
+
+        margin-top: 0px;     |-
+        margin-right: 10px;  |-> margin: 0px 10px 20px 30px;
+        margin-bottom: 20px; |-
+        margin-left: 30px;   |-
+
+ Também tem a opção de indicar cada shorthand das propriedades de preechimento e borda usando duas medidas:
+
+        padding-top:    10px;    |-
+        padding-right:  20px;    | -> padding: 10px 20px; 
+        padding-bottom: 10px;    |-
+        padding-left:   20px;    |-
+
+        margin-top:     0px;  |-
+        margin-right:  15px;  |-> margin: 0px 15px;
+        margin-bottom:  0px;  |-
+        margin-left:   15px;  |-
+
+    Margens no automatico:
+-> Centralização de blocos será muito usado. Para que isso seja feito devemos pedir ao navegador que calcule automaticamente as margens da esquerda e da direita para que o bloco seja colocado no meio do navegador, independente do tamanho da janela.
+-> Para centralizar uma caixa:
+   margin: auto;
+
+    Tipos de caixa
+-> Dependendo do comportamento da caixa, podemos classificar um elemento em uma de duas categorias:
+
+ Caixa do tipo block-level
+-> um elemento block-level sempre vai se iniciar em uma nova linha

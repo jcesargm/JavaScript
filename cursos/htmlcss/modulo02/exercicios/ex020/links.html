@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        a {
+            color: red;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:visited {
+            color: #8b0000
+        }
+        a:hover {
+            color: black;
+            text-decoration: underline;
+        }
+        a:active { /* quando clica nele ele muda*/
+            color:rgb(81, 81, 35);
+        }
+        .especial {
+            background-color: lightcoral;
+        }
+        .especial::before {
+            content: ' → '; /*encontrei os simbolos na erikasarti*/
+        }
+        .especial::after {
+            content: ' ← ';
+
+        }
+       /* a::after {
+            content: '[link]';
+            text-decoration: none;
+            font-weight: normal;
+            color: darkgrey;
+        }
+        */
+    </style>
+</head>
+<body>
+
+    <h1>Personalizando links</h1>
+    <ul>
+        <li><a href="https://github.com/siczju">Repositório GitHub</a></li>
+        <li><a href="https://youtube.com/cursoemvideo/" class="especial">Canal do YouTube</a></li> <!-- link especial caso queira, para indicar que ele é especial-->
+        <li><a href="https://www.cursoemvideo.com">Site do CursoEmVideo</a></li>
+    </ul>
+    
+</body>
+</html>

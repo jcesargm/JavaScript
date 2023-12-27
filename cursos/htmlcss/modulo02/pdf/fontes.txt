@@ -38,6 +38,8 @@ h1 -> franklin... -> fonte sem serifa e que tem espaço horizontal limitado, mas
 
 Sequências segurar -> CSS Web Safe Font Combinations
 
+    Fonte script (handwriting) -> aquelas que tentam imitar a escrita humana
+
     Tamanhos
 -> Para especificar o tamanho de alguma fonte temos várias medidas,como: cm, in(polegadas), pt(pontos), pc(paicas), px...
 -> font-size: px/em;
@@ -59,10 +61,25 @@ p{
     font-size: 1em;
     font-style: italic;
     font-weight: bold
+    text-decoration: underline; -> sublinhado, não estará no exemplo abaixo
 }
 Para isso:
 p{
-    font-family: italic bold 1em Arial, Helvetica, sans-serif;
+    font: italic bold 1em Arial, Helvetica, sans-serif;
 }
 Porém tem ordem, sendo: 
 style(itálico)->variant->weight(negrito)->size/line-height->font-family
+
+    Alinhamentos:
+-> Existe quatro tipos de Alinhamentos:
+text-align: left; -> alinha só a parte esquerda
+text-align: right; -> alinha só a parte direita
+text-align: center; -> alinha no meio
+text-align: justify; -> alinha tudo (jeito certo)
+
+    Para descobrir a fonte usada em um site:
+-> extensão Fonts Ninja
+
+    Fontes externas:
+-> Usamos o google fonts
+-> importe a url da fonte sempre nas primeiras linhas do css
