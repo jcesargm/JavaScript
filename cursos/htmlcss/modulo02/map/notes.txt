@@ -1,0 +1,4 @@
+    
+    Capitulo 13 - 17
+
+    modulo02 -> (Deixando as coisas mais bonitas) -> Fundamentos do design, psicologia das cores, tipografia, elementos CSS, modelo de caixas, wireframe, responsividade.

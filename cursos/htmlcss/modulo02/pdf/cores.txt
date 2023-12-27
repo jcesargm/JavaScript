@@ -1,0 +1,79 @@
+    Para complemento ex016
+
+
+CSS tags:
+
+<main>	->	div especial, indica que o conteúdo é principal
+
+width: px;	->	largura da caixa
+
+padding: px	->	espaço lateral do texto dentro da caixa
+
+margin: auto; (centraliza) ->	margem do texto (auto, 3px, ...) 
+
+text-align: justify	->	alinhamento do texto (center, end, justify, ...)
+
+border-radius: px;	-> cantos da caixa arredondados
+
+box-shadow (px px px)/ text-shadow (px px px)	->	sombra da caixa
+
+IMPORTANTE! degradê
+background-image: linear-gradient(to right, cores); -> podia ser to bottom, to top...
+background-image: radial-gradient(circle, cores);
+
+    psicologia das cores
+-> As cores podem influenciar se a gente fica em algo ou não, chamam atenção da gente, mesmo subconciente, a cor azul se destaca, tendo baixa taxas de rejeição.
+-> Inclusive tem paletas de cores especificas que dao harmonia etc.
+
+    O circulo cromático
+-> Precisamos separar as cores em grupo pra que possamos fazer a melhor decisao pro nosso site deixando visitantes surpresos.
+-> Sendo varias junções de cores começando da primária e dando as mais diversas.
+
+    Temperatura e harmonia
+-> Também conseguimos classificar as cores por sua temperatura, tendo cores quentes(red) e cores frias(blue).
+-> Além da classificar por temperatura tem como classificar por esquemas harmônicos.
+ Cores complementares
+-> São aquelas que apresentam o maior constraste entre si. Se pegarmos qualquer cor primária sua cor complementar é sempre uma cor secúndaria. Todas cores terciarias tem cor complementar outra cor terciaria. Quando juntamos duas cores complementares sempre obtemos o cinza.
+ Cores análogas
+-> Cores vizinhas entre si. Por serem consecutivas elas tem um baixo contraste entre elas, porém criam uma bela harmonia quando combinadas em um mesmo design
+ Cores análogas mais uma complementar
+-> Junção dos dois de cima. Quebra o ritmo adicionando uma cor que cria grande contraste com as três análogas.
+ Cores análogas relacionadas
+-> Nesse tipo escolhemos duas cores análogas consecutivas e depois pulamos pra um quadrado pra terceira cor.
+ Cores intercaladas
+-> Escolhemos a primeira cor(amarelo) e depois mais duas com o intervalo constante entre elas (não muito usada)
+ Cores triádicas
+-> Escolhemso três pontos equidistantes no circulo cromático, gerando um triângulo equilátero.
+ Cores em quadrado
+-> Semelhante ao triádico, mas permite selecionar quatro cores com um contraste razoavel entre as cores. Gerando sempre um quadrado perfeito com os pontos selecionados.
+ Cores tetrádicas
+-> Escolhemos 2 pares de cores complementares(4 cores).
+ Monocromia
+-> Usa apenas uma cor e varia apenas a sua saturação e o seu brilho.
+
+    Como representar uma cor?
+-> Se usamos as três cores primárias no maximo -> resulta no branco
+-> Se usamos as três cores primárias no minimo -> resulta no preto
+-> Cada cor primária pode ter um valor entre 0 e 255, para cada elemento 
+rgb(255, 123, 52) (255 red, 123 verde, 52 green)
+-> No código de cores hexadecimal #, 00 -> qtde de vermelho, AB -> qtde de verde, A9 -> qtde de azul
+hsl(170, 100%, 34%) -> 179 de hue(matiz) -> 100% de saturação -> 34% de luminância
+
+    Usando Gradientes em css (degradê)
+-> é considerado pelo navegador como se fosse uma imagem por isso (background-image:)
+body { 
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: linear-gradient(90deg, yellow, red);
+            color: rgb(0, 0, 0);
+        }
+linear-gradient -> quando a transição das cores se faz segundo um eixo (linha reta) que possui um sentido (por exemplo: horizontal) e uma direção (por exemplo: da esquerda para a direita).
+primeiro parâmetor da função acima (90deg) -> indica o ângulo de inclinação de 90 graus, e as seguintes indicam as cores do degradê a ser criado. Você pode indicar quantas cores quiser.
+
+-> também podemos criar os gradientes radiais:
+background-image: radial-gradient(circle, red, yellow, green);
+-> voce pode personalizar mais ainda colocando uma porcentagem do lado da como: red 10%, blue 40%, green 2%
+
+para achar o codigo de uma cor especifica: Colozilla
+
+para pegar uma cor de um site q vc achou bonita, tira print dela cola no gimp, e clica no conta gota no canto superior direito, clica na imagem que tem a cor e pronto
+-> outro jeito é instalar o Colozilla no seu google (video 6 modulo 2 ensina)
