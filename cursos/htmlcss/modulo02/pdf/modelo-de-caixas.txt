@@ -1,5 +1,7 @@
 
 
+    VEJA ESSE NO PDF ORIGINAL (MUITAS IMAGENS ILUSTRATIVAS)
+
     O que é uma caixa? (box model)
 -> a grande maioria dos elementos HTML são como caixas. São containers que armazenam conteudos ou até mesmo outras caixas.
 
@@ -89,4 +91,23 @@
 -> Dependendo do comportamento da caixa, podemos classificar um elemento em uma de duas categorias:
 
  Caixa do tipo block-level
--> um elemento block-level sempre vai se iniciar em uma nova linha
+-> um elemento block-level sempre vai se iniciar em uma nova linha e vai ocupar a largura total do elemento onde ele está contido. Se não tiver contido em nenhuma outra caixa ele ocupará 100% da largura do <body>
+-> O elemento block-level mais conhecido é o <div> e suas variações semânticas modernas da HTML5 como <main>, <section>, <aside>, etc.
+
+ Caixa do tipo inline-level
+-> Vai começar no ponto exato onde foi definido. A largura dele vai ocupar apenas o tamanho relativo ao seu conteudo. (<a> <abbr> <img> <br>...)
+
+    Grouping Tags e Semantic Tags
+-> <div> -> agrupador do tipo block-level
+-> <span> -> agrupador do tipo inline-level
+-> Agem da mesma maneira. Servindo para juntar vários outros elementos HTML.
+-> Porém são tags que ficaram obsoletas pois surgiram novas tags de agrupamentos para dividir as partes do nosso documento HTML.
+ Como:
+Header -> Cria áreas de cabeçalhos. Podendo ser o cabeçalho principal de um site ou até mesmo o cabeçalho de uma seção ou artigo. Normalmente inclui títulos <h1>-<h6>. Também pode conter menus de navegação.
+Nav -> Define área que possui os links de navegação pela estrutura de páginas que vão compor o website. Um <nav> pode estar dentro de <header>
+Main -> Agrupador usado para delimitar o conteúdo principal do nosso site. Normalmente concentra as seções, artigos e conteúdos periféricos.
+Section -> Cria seções para a sua página. Ela pode conter o conteúdo diretamente no seu corpo ou dividir os conteúdos em artigos com conteúdos específicos. Uma seção é um agrupamento temático de conteúdos, tipicamente como um cabeçalho
+Article -> Artigo é um elemento que vai conter um conteudo que pode ser lido de forma independente e dizem respeito a um mesmo assunto. Usado para delimitar um post de blog, forúm, noticia...
+Aside -> Delimita um conteúdo periférico e complementar ao conteúdo principal de um artigo ou seção. Normalmente posicionado ao lado de um determinado texto ou até mesmo no meio dele.
+-> pode ter um ou mais article dentro de uma section ou até mesmo section dentro de um article.
+Footer -> Cria um rodapé para o site inteiro, seção ou artigo. Não faz parte do conteudo, Possui informações sobre autoria do conteúdo, links adicionais, mapa do site, documentos relacionados.
