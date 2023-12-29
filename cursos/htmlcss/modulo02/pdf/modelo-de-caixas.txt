@@ -2,6 +2,8 @@
 
     VEJA ESSE NO PDF ORIGINAL (MUITAS IMAGENS ILUSTRATIVAS)
 
+aninhamento -> caixa dentro de caixa
+
     O que é uma caixa? (box model)
 -> a grande maioria dos elementos HTML são como caixas. São containers que armazenam conteudos ou até mesmo outras caixas.
 
@@ -111,3 +113,22 @@ Article -> Artigo é um elemento que vai conter um conteudo que pode ser lido de
 Aside -> Delimita um conteúdo periférico e complementar ao conteúdo principal de um artigo ou seção. Normalmente posicionado ao lado de um determinado texto ou até mesmo no meio dele.
 -> pode ter um ou mais article dentro de uma section ou até mesmo section dentro de um article.
 Footer -> Cria um rodapé para o site inteiro, seção ou artigo. Não faz parte do conteudo, Possui informações sobre autoria do conteúdo, links adicionais, mapa do site, documentos relacionados.
+
+    Sombras nas caixas:
+
+        box-shadow: 3px 5px 10px black;
+        /*ordem do box-shadow: 
+        1. deslocamento horizontal -> (h-offset) -> (quanto a sombra anda pro lado direito, valores negativo vao para a esquerda)
+        2. deslocamento vertical-> (v-offset) ->  (quanto a sombra vai andar pra baixo, valores negativos vao para cima)
+        3. Embaçamento (blur) -> quanto a sombra vai se espalhar pelo fundo
+        4. Cor(color) -> cor da sombra, impossivel usar transparencia
+        */
+
+    Bordas decoradas
+-> As bordas da caixa não precisam ser sempre retangulares, pode ter alguns detalhes especiais.
+ Vertices arredondados:
+-> border-radius: 10px;
+-> todos os vertices foram arredondados 10px simetricamente, podemos indicar quatro medidas diferentes p cada vertice:
+-> border-radius: 10px 20px 30px 40px;
+-> Ou também podemos fazer com dois valores, vai agir em vertices intercalados:
+-> border-radius: 10px 30px;
