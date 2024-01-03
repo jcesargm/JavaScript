@@ -1,0 +1,57 @@
+    CSS -> Cascading Style Sheets (Folhas de estilo em cascata)
+    HTML -> Hypertext Markup Language
+   
+    Tags HTML
+    -> o HTML funciona baseado em marcações chamadas tags. 
+
+    Tag -> Uma tag é um conjunto de palavras entre sinais de colchete angular 
+    <p>Exemplo de paragrafos</p>
+    <p> -> abertura da tag
+    </p> -> fecha a tag
+
+    -> As tags também podem ter atributos e valores que vão configurar seu comportamento:
+    <a href="destino.html">Exemplo de link</a>
+    href -> parâmetro
+    ="" -> valor
+    Exemplo de link -> conteudo
+
+    -> uma mesma tag pode ter vários parâmetros cada um com seu valor.
+    -> algumas tags não precisam de fechamento </p>, como: <br> (espaço) e <img>
+
+    CSS -> Cascading Style Sheets (Folhas de estilo em cascata)
+    -> usada para dar um resultado visual dos elementos HTML
+    -> As configurações das CSS são realizadas através dos seletores. Vamos ver a anatomia de um seletor:
+
+    p{
+        font-family: Arial;
+        font - size: 12pt;
+        color: blue;
+    }
+
+    p -> seletor
+    todo texto entre chaves -> declaração
+    color -> propriedade
+    blue -> valor
+
+    -> esse seletor vai configurar o visual dos elementos parágrafos do site corrente. Nesse seletor serão feitas três configurações:
+    * A fonte será Arial.
+    * O tamanho da letra será 12pt(pontos)
+    * A cor da letra será azul
+
+    -> ao final de cada declaração no CSS temos que colocar ; para indicar que ela se encerrou
+    -> toda propriedade deve ter seu valor, e devem ser separados por dois pontos "color: blue;"
+
+        ESTRUTURA BÁSICA DE UM DOCUMENTO HTML
+    -> para criar rapidamente esse modelo, é só digitar ! e apertar enter.
+
+<!DOCTYPE html> -> Indica que o documento será escrito na versão mais atualizada da linguagem(no caso HTML5)
+<html lang="pt-br> -> delimita o documento html, que é sempre dividido em duas partes: cabeça e o corpo. Também indicmaos que o idioma será BR
+<head> -> Delimitam a cabeça da página, local onde é realizadas configurações iniciais como: formatos, estilos, icones de favoritos...
+    <meta charset="UTF-8"> -> adiciona ao documento atual o suporte a caracteres acentuados.
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> -> Indica que o conteudo ocupará todo o espaço da tela, escala 1:1
+    <title>Document</title> -> Configura o título da página que aparecerá como identificação da aba do navegador ao lado do favicon
+</head> -> fecha tag
+<body> -> delimitam o corpo da página, a maior porção do site que vai aparecer na tela. Aqui colocaremos o nosso conteúdo.
+
+</body> -> fecha tag
+</html> -> fecha a tag la em cima

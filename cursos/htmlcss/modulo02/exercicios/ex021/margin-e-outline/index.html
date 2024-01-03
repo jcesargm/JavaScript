@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>box-model</title>
+    <style>
+        h1 { /*box-level*/
+            background-image: linear-gradient(to bottom, rgb(37, 135, 37), rgb(97, 161, 97));
+            height: 200px;
+            width: 410px;
+            border-radius: 5px;
+            
+            /*Se eu quiser transformar o h1 em inline: display: inline;
+              inline -> não tem altura e largura
+              Se eu quiser transformar o link em block: display: block;
+
+            /*
+              box-sizing: width height
+              box-model: padding, border, outline, margin
+            */
+
+            /* border: 2px solid blue; */
+            border-width: 2px;
+            border-style: solid;
+            border-color: blue;
+
+            /* padding: 10px 10px 10px 10px; //  top, right, bottom, left*/ 
+            padding-top: 10px;
+            padding-right: 10px;
+            padding-bottom: 10px;
+            padding-left: 10px;
+
+            /*Centralizar alguma caixa: margin: auto;*/
+
+            /* margin: 10px 10px 10px 10px; // top, right, bottom, left*/
+            margin-top: 10px;  
+            margin-right: auto; 
+            margin-bottom: 10px; 
+            margin-left: auto; 
+
+            /* outline: 5px dashed salmon*/
+            outline-width: 5px;
+            outline-style: dashed; /*pontilhado*/
+            outline-color: salmon;
+        }
+        p {  /*box-level*/
+            background-image: linear-gradient(to right, rgb(54, 54, 96), rgb(71, 71, 125));
+            font-size: 1.20em;
+            text-align: center;
+
+            height: 100px;
+            width: 640px;
+
+            border: 10px solid rgb(37, 135, 37);
+            padding: 10px 20px;
+        }
+        a { /*inline-level*/
+            background-image: linear-gradient(to top, rgb(190, 101, 101), rgb(166, 54, 54));
+            width: 30px;
+            height: 10px;
+            
+            border: 10px solid rgb(156, 156, 49);
+            padding: 10px;
+
+        }
+    </style>
+</head>
+<body>
+    <header>
+     <h1> Aqui tem uma caixa box-level </h1>
+    </header>
+    <p> &lt;p&gt; também é uma caixa box-level, mas o <a href="#"> &lt;a&gt; é um exemplo de inline-level</a></p>
+</body>
+</html>

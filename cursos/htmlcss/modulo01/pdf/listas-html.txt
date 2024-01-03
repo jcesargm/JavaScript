@@ -1,0 +1,114 @@
+    Para complemento veja o ex009
+
+  <ol></ol> -> lista ordenadas (tipos = i, I, a, A, 1)                | Os dois usam <li></li> (list item)
+  <ul></ul> -> lista não ordenadas (tipos = square, circle, e padrão) | Os dois usam <li></li> (list item)
+  <dl></dl> -> lista de definições (<dt></dt> = termo) (<dd></dd> = definição do termo)
+
+    Listas
+-> Facilitam a leitura, organizam o conteúdo.
+
+    ordered lists -> html chama assim listas que a ordem dos itens é algo muito importante.
+
+
+
+    Listas Ordenadas: <ol>
+-> Usada qnd a ordem dos itens é mt importante
+-> Para criar a lista, usamos as tags: 
+<ol> (ordered list) -> para delimitar a lista
+<li> (list item) -> para identificar cada item da lista 
+<ol>
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+    <li>Item 4</li>
+    <li>Item 5</li>
+</ol>    
+
+-> a tag <ol> possui parâmetro type, onde configuramos o tipo de marcador da lista atual.
+1 (padrão) -> 1, 2, 3, 4...
+A - A, B, C, D...
+a - a, b, c, d...
+I - I, II, III, IV...
+i - i, ii, iii, iv...
+
+-> você também pode indicar o início da contagem usando o parâmetro start.
+<ol type="I" start="5"> -> VI, VII, VIII, IX...
+
+
+
+    Listas não Ordenadas(unordered lists): 
+-> Também chamadas de listas com marcadores, que são aquelas onde a ordem dos itens não influenciará no significado da lista.
+-> Então é apenas uma ótima maneira para organizar os itens que não apresentam classificação necessariamente.
+-> ex: lista de oq comprar no mercado.
+-> Para criar usamos as tags:
+<ul> -> delimitar a lista
+<li> -> para criar cada um dos seus internos
+
+-> O marcador padrão é a bola preta totalmente preenchida.
+<ul>
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+    <li>Item 4</li>
+    <li>Item 5</li>
+</ul>  
+
+-> Porém existe a opção de configurar a propriedade type da tag <ul>, com os valores:
+disc   -> padrão. Bola totalmente preta.
+circle -> bola com uma borda preta sem preechimento.
+square -> Um pequeno quadrado preto totalmente pintado.
+ex: <ul type="square"> </ul>
+
+
+
+    Misturando as Listas:
+-> Também podemos criar listas mistas, configurando listas dentro de outras listas.
+
+<ul>
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <ol type="a">
+        <li>Item 2.1</li>
+        <li>Item 2.2</li>
+        <li>Item 2.3</li>
+    <li>Item 3</li>
+</ul>  
+
+    RESULTADO:
+
+    1. Item 1
+    2. Item 2
+        a. Item 2.1
+        b. Item 2.2
+        c. Item 2.3
+    3. Item 3
+
+-> as linhas da lista interna são deslocadas para a direita, por serem sub-listas.
+-> Também podemos misturar os dois tipos de listas <ol> e <ul>, sendo as sub-listas sempre deslocadas para a direita.
+
+    Lista de Definições: 
+-> É como se fosse um dicionario, todos os termos e suas descrições.
+-> toda lista de definições está dentro da tag <dl></dl> (definition list)
+-> Cada termo é um <dt> (definition term)
+-> Cada descrição é um <dd></dd> (definition description)
+-> as tags dt e dd tem fechamento opcional.
+
+<dl>
+    <dt>HTML</dt>
+    <dd>Linguagem de marcação utilizada para criar o conteúdo de sites.</dd>
+
+    <dt>CSS</dt>
+    <dd>Linguagem de marcação para a especificação de estilos de sites.</dd>
+
+    <dt>JavaScript</dt>
+    <dd>Linguagem de programação para criar interatividade em sites.</dd>
+</dl>
+
+    RESULTADO:
+
+HTML
+    Linguagem de marcação utilizada para criar o conteúdo de sites.
+CSS
+    Linguagem de marcação para a especificação de estilos de sites.
+JavaScript
+    Linguagem de programação para criar interatividade em sites.

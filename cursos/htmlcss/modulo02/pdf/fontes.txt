@@ -1,0 +1,85 @@
+
+
+    Fontes
+-> transmite emoções igual a cor
+
+ Glifos, letras, caracteres...
+-> signos alfabéticos para a reprodução mecânica.
+
+ Familia tipografia
+-> podem ser da mesma familia tipografica mas com pesos diferentes (tamanho espessura)
+
+ Fontes
+-> conjunto de glifos que forma uma familia tipografica.
+-> Fontes serifadas usada em titulos, por dar a impressao de juntar as letras.
+-> Fontes não serifadas usada em textos por dar impressao de clareza.
+-> Fontes monoespaçadas usada p representar comandos de linguagem de programação (muito espaçada) também chamada fonte de terminal ou fonte de console
+Fonte display usada em titulo em destaque, usa bastante efeito visual, chamadas de fontes comemorativas
+
+-> para configurar a familia tipografica usamos a propriedade font-family da CSS, se indicarmos mais de uma familia na sequencia estamos indicando que o navegador vai dar preferencia em achar a primeira, se nao achar usa até a ultima, que geralmente é genérica (serif, sans-serif ou monospaced).
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+}
+h1 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(24, 97, 126);
+}
+h2 {
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(33, 136, 161);
+}
+p {
+    font-family:'Courier New', Courier, monospace;
+}
+
+h1 -> franklin... -> fonte sem serifa e que tem espaço horizontal limitado, mas n existe nos celulares que tem a fonte Arial Narrow que é parecida porém menos densa, se tudo der errado ele pega uma fonte sem serifa.
+
+Sequências segurar -> CSS Web Safe Font Combinations
+
+    Fonte script (handwriting) -> aquelas que tentam imitar a escrita humana
+
+    Tamanhos
+-> Para especificar o tamanho de alguma fonte temos várias medidas,como: cm, in(polegadas), pt(pontos), pc(paicas), px...
+-> font-size: px/em;
+-> recomendado o uso de "px" ou "em"
+-> 16px (padrão) = 1em (padrão)
+-> h1 -> 2 em (por ser titulo 2x maior que o txt normal)
+-> h2 -> 1,5em
+
+    Outros estilos
+-> formatações em css:
+font-style: italic -> itálico
+font-weight: (bold, bolder, lighter); -> negrito
+
+    shorthands (atalhos para formatação)
+-> invés de fazer varias configurações em multiplas linhas, podemos simplificar:
+Disso:
+p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    font-style: italic;
+    font-weight: bold
+    text-decoration: underline; -> sublinhado, não estará no exemplo abaixo
+}
+Para isso:
+p{
+    font: italic bold 1em Arial, Helvetica, sans-serif;
+}
+Porém tem ordem, sendo: 
+style(itálico)->variant->weight(negrito)->size/line-height->font-family
+
+    Alinhamentos:
+-> Existe quatro tipos de Alinhamentos:
+text-align: left; -> alinha só a parte esquerda
+text-align: right; -> alinha só a parte direita
+text-align: center; -> alinha no meio
+text-align: justify; -> alinha tudo (jeito certo)
+
+    Para descobrir a fonte usada em um site:
+-> extensão Fonts Ninja
+
+    Fontes externas:
+-> Usamos o google fonts
+-> importe a url da fonte sempre nas primeiras linhas do css

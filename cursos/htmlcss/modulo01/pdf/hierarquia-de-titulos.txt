@@ -1,0 +1,13 @@
+    Para complemento, veja o exercicios/ex006/index.html
+
+    São os títulos que dizem quando um assunto é principal ou sub-assunto
+    Sub-Títulos são partes que falam sobre determinado assunto, sub-temas para melhorar a organização dos pensamentos. Facilita na organização do texto. Além de não deixar o texto cansativo e grande e desgastar o leitor.
+
+    Títulos em HTML são conhecidos como headings (<h1> <h2> <h3> <h4> <h5> <h6>)
+    Um <h1> siginifica que esse é um assunto principal
+    Já o <h2> significa que esse é um sub-assunto do <h1> que está imediatamente acima dele.
+    O <h3> significa que esse é um sub-assunto do <h2> que está acima dele. Assim sucessivamente até o <h6>
+
+    Isto é, uma hierarquia de títulos.
+
+    Para criar um texto qualquer para teste, digite lorem na tag body, que você terá.

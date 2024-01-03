@@ -1,0 +1,107 @@
+    Desafio 10
+
+    Ideia do projeto:
+-> Criar um site de notícias, só que com apenas uma notícia.
+-> Objetivo: Aprender como organizar o conteúdo e apresentá-lo em forma de página web.
+
+ Wireframe:
+-> Tudo começa desenhando o que chamamos de wireframe. Planejando qual será a estrutura e comportamento do site.
+-> Servirá de base na hora de planejar as caixas que farão parte da página.
+-> Para criar nossos wireframes tem o site: MockFlow.
+ Cores:
+-> Em seguida do wireframe, escolheremos a paleta de cores que será utilizada, escolhemos tons de verde por falarmos de android.
+ Fontes:
+-> As fontes escolhidas: Arimo para os destaques principais, ja que vamos falar sobre android optou por uma donte chamad iDroid, já para o texto padrão será a fonte Arial.
+
+    Responsividade:
+-> Capacidade do nosso site ser visualizado em varios dispositivos com tamanho diferentes de tela.
+-> Um site responsivo vai ser capaz de adaptar os tamanhos dos seus componentes para manter o site visivel em qualquer tela.
+
+    Largura e altura adaptáveis:
+-> Para que nosso site se adapte mais facilmente ao tamanho da tela, podemos utilizar técnicas de deixar algumas caixas estrategicamente um pouco mais flexíveis, indicando valores minimos (min-width / min-height) e máximos (max-width / max-height). 
+-> Para o nosso projeto, vamos definir os limites da largura da caixa <main> onde estará contido o conteúdo principal do artigo.
+ min-width: 800px;
+ max-width: 800px;
+-> essa configuração vai garantir que a caixa não fique com largura menor que 400px para telas pequenas, e nem seja maior que 800px para telas muito grandes.
+-> A caixa ocupará 100% da largura do contêiner.
+
+    Variáveis em CSS:
+-> Para criar variaveis precisa definir uma area de definicoes dentro do style, uma pseudo-classe chamada :root, que definem as configurações para a raiz de uma árvore, que vai servir para o documento inteiro.
+
+:root {
+    --cor0: #c5ebd6;
+    --cor1: #83E1AD;
+    --cor2: #3DDC84;
+    --cor3: #2FA866;
+    --cor4: #1A5C37;
+    --cor5: #063d1e;
+    --fonte0: Arial, Helvetica, sans-serif;
+    --fonte1: 'Arimo', cursive;
+    --fonte2: 'Android', sans-serif;
+}
+
+-> definimos nove variaveis com as configurações de cores e fontes que definimos no começo do capitulo.
+-> Agora definir cores e fontes em nossos elementos HTMl ficará mais facil utilizando a função var()
+ body {
+    font-family: var(--fonte0);
+    color: var(--cor);
+    background-color: var(--cor1);
+ }
+-> as variaveis devem ter seus nomes iniciados com dois traços obrigatoriamente.
+
+    Seletor * em CSS:
+-> aplica uma configuração padrão para todos os elementos do código HTML a qual o estilo está sendo aplicado.
+-> Usaremos ele para eliminar as eventuais margens que os navegadores (user agents) adicionam a alguns elementos. Permitindo personalizar as medidas que vão aparecer na tela para cada elemento individualmente.
+
+    Espaçamento entrelinhas em textos:
+-> Configuração importante que podemos fazer em textos muito longos é o espaçamento dentre as linhas do texto. Com  a propriedadade line-height, podemos dizer qual é o tamanho do espaço entre uma linha e a outra do texto. O valor padrão na maioria dos navegadores é algo próximo a 1.2em.
+
+    Sombra em Textos:
+-> text-shadow -> Tem os mesmos quatros parâmetros principais da bow-shadow:
+ Deslocamento horizontal (h-offset) -> quanto a sombra vai andar para a direita. (Valores negativos vão p esquerda)
+ Deslocamento vertical (v-offset) -> quanto a minha sombra vai para baixo (Valores negativos vão para cima)
+ Embaçamento (blur) -> quanto a sombra espalhará pelo fundo.
+ Cor (color) -> cor da sombra. É possivel usar transparencia.
+
+ text-shadow: 2px 2px 0px black;
+
+    Personalizando as listas:
+-> No projeto  (desafio10) vamos adicionar uma lista com todas as 14 versoes principais do android. Se fizermos apenas usando os elementos comuns, ocupará um grande espaço vertical, a solução é dividir a lista em duas colunas, e modificar o marcador para personalizar ainda mais a exibição do conteúdo.
+
+ ul {
+    list-style-type: '\2714\0020\0020';
+    columns: 2;
+    list-style-position: inside;
+ }
+
+-> A primeira linha faz com que o marcador seja personalizado com o parametro list-style-type, o valor \2714 corresponde ao simbolo de pronto (feito) que tem o código unicode U+2714. O valor \0020 corresponde a um espaço branco (também pode ser \00A0), confira-os no site da Emojipedia.
+-> A segunda linha vai organizar a lista em duas colunas. O total de elementos <li> será dividido em duas partes iguais (ou quase), e o resultado será colunado.
+-> A terceira linha vai fazer que os marcadores seja exibidos na parte interna da caixa de uma lista. outside seria o contrário, os marcadores ficariam fora da caixa.
+-> por padrão do elemento list-style-position é outside.
+
+    Videos do YouTube mais flexíveis.
+-> No iframe o tamanho do video ja vem fixo, por isso colocaremos ele dentro de uma div, para que o video esteja limitado dentro de um contêiner.
+ <div class="video">
+    codigo do iframe
+ </div>
+
+ div.video {
+    position: relative;
+    background-color: var(--cor4);
+    height: 0px;
+    margin-left: -20px
+    margin-right: -20px
+    margin-bottom: 15px
+    padding-bottom: 59%;
+ }
+ div.video > iframe {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+ }
+
+ position -> valor padrão: static, que mantém a hierarquia conforme estabelecido no HTMl.
+ -> na div colocamos o valor como relative, para que seja considerado o posicionamento atual do elmeento de divisão e que ele se mantenha adaptável para o caso de alteração no tamanho do navegador.
+ -> ja no iframe usamos o absolute para que a div (que é o seu conteiner) torne-se o ponto de partida para o posicionamento do frame. A partir dai podemos utilizar as propriedades para configurar o deslocamento à esquerda (left) e ao topo (top), e seu tamanho em largura/altura, todos em porcentagens de tela.

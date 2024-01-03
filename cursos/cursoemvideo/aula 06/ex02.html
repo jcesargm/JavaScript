@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiro Programa</title>
+    <style> 
+    body{
+        background-color: rgb(138, 43, 226);
+        color: white;
+        font: normal 20pt Arial; /* comentario em css */
+    }
+    h1{
+        color:brown;
+    }
+    p{
+        color:aqua;
+    }
+    
+    </style>
+</head>
+<body>
+   <h1> Olá, Mundo!</h1> <!-- para fazer comentario em html <!----> 
+   <p> Já me livrei da maldição </p>
+   <script> 
+      var n1 = Number(prompt("Digite um Número")) 
+     var n2 = Number(window.prompt("Digite um Número")) 
+      var soma = n1 + n2 // converter de sting para número, para isso, podemos usar:
+      //  <script>
+var nome = window.prompt('qual é seu nome')
+document.writeln(`Olá <strong>${nome}</strong>! Seu nome tem ${nome.length} letras<br>`)
+document.writeln(`Seu nome em maiúsculas é ${nome.toUpperCase()}<br>`)
+document.write(`Seu nome em minúsulas é ${nome.toLowerCase()}`)
+    </script>
+
+// Number.parseFloat(n) -> real
+// e um simplificado que é Number(n)
+
+// mas de número para string tem duas maneiras
+// String(n)
+// n.toString() então se eu quiser qualquer coisa em string é só: soma.toString()
+// ou String(soma)
+window.alert(`A soma entre ${n1} e ${n2} é igual a ${soma}`) // concatenação
+// (number + number) para adição
+// (string + string) para concatenação
+// prompt -> retorna string
+
+// var s = 'Java Script'
+
+// usando a variavel s, s.length, me diz o tamanho da string
+// s.toUpperCase() joga pra letra maiuscula
+// s.toLowerCase() joga pra letra minuscula
+</script>
+</body>
+</html>

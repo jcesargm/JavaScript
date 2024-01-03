@@ -1,0 +1,70 @@
+    Para complemento exercicio 11 e 12, e desafios 06-09
+
+    Podemos acessar sites em computadores, celulares, smartv, e o site precisa adaptar seu conteudo a tamanho de telas diferentes. A imagem pode ser redimensionada forçadamente em CSS porém continua com o mesmo tamanho em bytes, aumentando o consumo de dados em dispositivos moveis, deixando o site pesado.
+
+    Imagens Flexíveis:
+-> Primeiro passo de adaptar o conteudo ao tamanho da tela, vai ser aprender a gerar imagens de tamanhos diferentes. E a fazer o navegador carregar a imagem certa para cada situação.
+-> Para isso precisamos conhecer as tags <picture> e <source>
+
+<picture>
+    <img src="foto-g.png" alt="A imagem flexível funciona">
+</picture>
+
+-> A tag picture irá ter as outras fontes de imagens, a pequena(300 x 300px), média(700 x 700px) e a grande(1000 x 1000px)
+-> por padrão a imagem foto grande (foto-g.png) será carregada.
+-> o problema será quando a janela do navegador chegar perto de 1000px de largura, pois a foto não caberá mais la, agora vem a tag source.
+
+
+<picture>
+    <source media="(max-width: 750px)" srcset="foto-p.png" type="image/png> (source:media:type)
+    <source media="(max-width: 1050px)" srcset="foto-m.png" type="image/png> (source:media:type)
+    <img src="foto-g.png" alt="A imagem flexível funciona">
+</picture>
+
+ -> tag source possui 3 atributos
+-> type -> indica o media type da imagem que usamos
+-> srcset -> configura o nome da imagem que será carregada quando o tamanho indicado for atingido.
+-> media -> indica o tamanho maximo a ser considerado pra carregar a imagem indicada no atributo srcset.
+
+-> é importante ter ordem entre os <source>, nessa configuração os itens acimas são os de menores tamanho para max-width e os seguintes sejam maiores, de forma crescente. O Ultimo item dentro de <picture> deve ser a imagem padrão.
+
+    Audio:
+-> Para colocar audio no site, precisamos da tag <audio> e de alguns <source>
+
+    <audio preload="metadata" controls autoplay loop>
+        <source src="midia/guanacast-33.mp3" type="audio/mpeg">
+        <source src="midia/guanacast-33.ogg" type="audio/ogg">
+        <source src="midia/guanacast-33.wav" type="image/wav">
+        <p>Seu navegador não suporta áudio <a href="midia/guanacast-33.mp3" download="midia/guanacast-33.mp3" type="audio/mpeg"></a></p>
+    </audio>
+
+-> Atributos:
+    preload -> indica se o áudio será pré-carregado ou não e aceita três valores:
+metadata -> vai carregar apenas as informações sobre o arquivo (tempo, tamanho, informações de direitos, etc)
+none -> não vai carregar nada até que o usuário clique no botão play, ou um script inicie a produção.
+auto (padrão) -> vai carregar o arquivo de áudio inteiro assim que a página for carregada, mesmo que o usuário não aperte play
+    controls -> apresenta o player na tela. Caso nao seja colocado na tag o controle será transparente e o usuário não poderá interagir com ele.
+    autoplay -> inicia a reprodução do audio assim que a página for carregada.
+    loop -> faz com que o audio seja repetido eternamente assim que terminar sua reproduçaõ.
+
+-> colocamos varios formatos de audios, os de baixos só irão funcionar caso o de cima falhe, Caso todos falhem criamos um paragrafo que permite o download do arquivo mp3 para ouvir no player padrão do dispositivo.
+
+    Videos:
+-> use a tag <video></>, caso o arquivo esteja hospedado no nosso proprio servidor.
+<video width="600" poster="thumb.jpg" controls autoplay>
+    <source src="meu-video.webm" type="video/webm>
+    <source src="meu-video.mp4" type="video/mp4>
+    <source src="meu-video.ogg" type="video/ogg>
+    <p>Infelizmente seu navegador não conseguiu carregar o vídeo.</p>
+</video>
+-> Atributos:
+width -> largura do video na tela
+poster -> configura uma imagem que vai aparecer como capa
+controls -> configura se os controles do video aparecerao na parte inferior da midia. Por padrão n aparece.
+autoplay -> faz o video comecar automaticamente assim que a pagina for carregada.
+
+MPEG, WEBM -> possui maior compatibilidade com os navegadores.
+-> Nossos videos podem ser caros de ser hospedados nos sites, então usamos o youtube como plataforma.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ZApnAy6ZxGc?si=bNx30zMVQmLW8ayI&amp;start=23" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+

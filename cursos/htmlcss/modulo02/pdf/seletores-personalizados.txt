@@ -1,0 +1,74 @@
+    Para complemento: ex018 - 19 - 20
+
+    Personalizando Seletores:
+-> id: (#)
+-> class: (.)
+-> ao criar nosso conteudo em HTML podemos identificar um determinado elementos único com um id, ou agrupar elementos multiplos que tenham caracteristicas semelhantes, com um class.
+-> um id vai identificar um elemento único dentro da página atual. Permitindo criar um estilo especial para um elemento isolado.
+-> Uma classs vai identificar uma classe à qual um ou mais elementos pertençam, compartilhando caracteristicas em comum a todos que façam parte do grupo.
+-> REGRA! -> "em um mesmo documento html so podemos usar um id para um elemento, nao podemos ter dois elementos com um id, dentro da mesma página"
+-> não adianta colocar apenas id ou class se nao personalizar o resultado visual usando seletores personalizado
+    EXEMPLOS!
+#titulo-principal {
+    background-color: blue;
+    color: white;
+    text-align: center;
+}
+.topico {
+    text-align: right;
+}
+
+<h1 id="titulo-principal"> Esse eh o titulo principal </h1>
+<h2 class="topico"> Esse eh um topico <h2>
+<h2 class="topico"> Esse eh um topico diferente<h2>
+
+    Pseudo-classes e pseudo-elementos
+pseudo-classes -> relacionada ao estado (vazio, habilitado...)
+pseudo-elemento -> ele mexe no conteudo do elemento
+pseudo-classes -> :
+pseudo-elementos -> ::
+children -> ">"
+-> Uma pseudo-classe é uma palavra-chave adicionada as declarações de um seletor apos o sinal de 2 pontos, e especificam um estado especial de um elemento. :hover :visited :active :checked :empty :focus
+-> Já um pseudo-elemento CSS é uma palavra chave adicionada as declareações de um seletor apos dois sinais de dois pontos, permitem voce formatar um pedaço especifico do elemento referenciado. ::after ::first-letter ::first-line
+-> Vamos usa-los primeiramente na personalização de links:
+-> link violeta -> ja visto | link azul -> ainda nao viu
+<a href="link" class="especial">Texto qualquer</a>
+<style>
+    a {
+        font-weight: bold;
+        text-decoration: none;
+        color: red;
+    }
+    a:visited { // ja visitado
+        color: darkred;
+    }
+    a:hover { // passa o mouse em cima e o sublinhado aparece dnv
+        text-decoration: underline;
+    }
+    .a::before { // antes do link
+        content: '>';
+    }
+    .a::after { // depois do link
+        content: '<';
+    }
+</style>
+
+Outro exemplo:
+
+<h1> Conteúdo especial </h1>
+<div>
+    <p>Surpresa!</p>
+</div>
+    <p> Veja o conteúdo oculto aparecendo!</p>
+
+<style>
+    div > p { // vai esconder o paragrafo que está dentro da div com a tag display e o valor none
+        display: none;
+    }
+    div:hover > p { // faz o paragrafo escondido reaparecer com o fundo pintado de amarelo(qnd passarem o mouse por cima dele)
+        display: block;
+        background-color: yellow;
+    }
+</style>
+
+-> ">" -> quer dizer q os filhos(children) imediatos de um elementos. No caso "p" é direct children da "div"
