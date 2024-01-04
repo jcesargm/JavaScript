@@ -24,30 +24,30 @@
 
 *{
     margin: 0px;
-    padding: 0px;
 }
 body {
     background-color: var(--cor0);
     font-family: var(--fonte-padrao);
 }
 header {
-    background-color: var(--cor4);
+    background-image: linear-gradient(to bottom, #3DDC84, #063D1E);
+    height: 100px;
+    padding: 20px;
+    font-family: var(--fonte-destaque);
 }
 header > h1 {
     font-family: 'Bebas neue' ;
-    color: white;
+    color: var(--cor3);
     text-shadow: 1px 1px 1px black;
     text-align: center;
 }
 header > p {
     font-family: Arial, Helvetica, sans-serif;
-    color: white;
-}
-nav {
-    background-color: var(--cor5);
-}
-main {
-    background-color: white;
+    color: var(--cor5);
+    text-shadow: 1px 1px 1px black;
+    text-align: center;
+    padding-top: 3px;
+    font-size: 0.8em;
 }
 main > article > h1 {
     font-family: 'Android';
@@ -55,7 +55,11 @@ main > article > h1 {
 main > article > h2 {
     font-family: var(--fonte-android);
 }
-footer {
-    background-color: var(--cor5);
-    color: white;
+main {
+    border-radius: 5px;
+    width: 600px;
+    padding: 10px;
+    background-color: white;
+    margin: auto;
+    box-shadow: 1px 1px 0.5px rgba(54, 54, 54, 0.083);
 }
