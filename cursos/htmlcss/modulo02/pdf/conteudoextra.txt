@@ -1,0 +1,13 @@
+border-box -> padding, border, margin
+box-sizing -> 
+    content-box: bordas e paddings não são incluidos no calculo de largura e altura
+    border-box: bordas e paddings são incluidos no calculo de largura e altura
+            (nenhum dos dois incluem margens no calculo de box model)
+
+margin: auto; -> só com blocos (display: block;)
+
+min width -> ideal = 320
+max width -> depende
+
+text-indent: 30px; -> paragrafo
+line-height: 1.2em; -> altura da linha
