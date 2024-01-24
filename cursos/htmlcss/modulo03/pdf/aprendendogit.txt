@@ -1,0 +1,13 @@
+há dois tipos de repositórios: Locais e Remotos.
+
+  Repositório Local -> Local pois sempre vai estar no seu pc. Tendo a dunção facilitar a gestão de diversas versões do seu projeto de forma simples e automática.
+ -> Deixamos a responsabilidade por gerenciar as versões dos nossos projetos nas mãos do VCS (Sistema de Controle de versões), software especializado que vai fazer tudo automaticamente, permitindo que você volte a qualquer ponto no momento que achar melhor.
+ -> Um dos VCS mais famosos é o GIT, feito por Linus Torvalds, criador do Linux.
+ -> o esquema do GIT é focado no nosso computador, o software monitora uma pasta "meu-site" que tem a versão atual do projeto e uma pasta especial chamada .git, com varias versões pelas quais o site passou durante a evolução.
+ -> A grande vantagem de usar um VCS como o GIT, é poder voltar a qualquer momento para qualquer versão anterior do projeto de forma imediata.
+
+Mas se o PC quebrasse? Ou eu quisesse mostrar para outra pessoa de forma prática?
+Por isso temos o Repositório Remoto
+
+ Repositório Remoto -> Para solucionar os problemas levantados na ultima frase, precisamos de um lugar na nuvem para guardar nossos repositórios locais. E é ai que entra nosso segundo grande personagem: GitHub.
+ Github -> É um serviço que nos permite criar um repositório remoto na nuvem para guardar nossos projeots e versionamentos. Ganhou novas funcionalidades e acabou virando uma rede social para programadores pois agora além de guardarmos nossos códigos nos servidores, podemos nos comunicar com outros devs e até mesmo colaborar com outros projetos que estão disponiveis. 
