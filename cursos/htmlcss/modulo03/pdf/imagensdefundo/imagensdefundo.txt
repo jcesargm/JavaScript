@@ -1,5 +1,7 @@
         complemento: exercicio 22, desafio 011
 
+        Papel de parede -> não tem um sentido semântico, e sim de design
+
  O fundo (background) não precisa ter só cor, podendo ter também imagens ao fundo de qualquer elemento exibido visualmente no HTML.
 
     Temos três formas em modo geral de preencher uma caixa em HTML: (cor solida, degrade, imagem de fundo)
