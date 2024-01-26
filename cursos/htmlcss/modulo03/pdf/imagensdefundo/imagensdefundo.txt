@@ -1,0 +1,58 @@
+        complemento: exercicio 22, desafio 011
+
+ O fundo (background) não precisa ter só cor, podendo ter também imagens ao fundo de qualquer elemento exibido visualmente no HTML.
+
+    Temos três formas em modo geral de preencher uma caixa em HTML: (cor solida, degrade, imagem de fundo)
+            background-color: blue;
+            background-image: linear-gradient(to bottom, yellow, orange);
+            background-image: url('pattern003.png');
+
+ Body é uma grande caixa
+ -> Ou seja esse recurso também pode ser usado no body.
+
+ Personalizando a aplicação do background:
+ -> Qnd o tamanho da caixa é maior que o tamanho da imagem, por padrão a imagem será repetido nos eixos (x e y), quantas vezes necessarios para cobrir a extensão do contêiner
+
+ -> Para mudar isso usamos a propriedade: background-repeat, que aceita os valores:
+  background-repeat: repeat; -> vai se repetir ate cobrir a extensão da caixa inteira
+  background-repeat: no-repeat; -> só irá a imagem sem se repetir
+  background-repeat: repeat-x; -> só irá se repetir no eixo x (na horizontal) 
+  background-repeat: repeat-y; -> só irá se repetir no eixo y (na vertical) 
+
+  -> ao usar no-repeat, navegador não aumenta o diminui o tamanho da imagem p caber no tamanho da caixa, para realizar essa adaptação usamos outra propriedade em breve.
+ 
+  -> além de escolher o nível de repetição do background, tambem podemos mudar a posição de referência de início das repetições, que começa por padrão na left top. Com background-position;
+
+  -> Podemos redimensionar a imagem para força-la a caber na caixa. Com background-size, que aceita os valores:
+   background-size: auto; -> padrão, a imagem de fundo será aplicada em seu tamanho original.
+   background-size: [length]px || [length]%; -> redimensiona a largura da imagem e faz a altura se adaptar automaticamente.
+   background-size: cover; -> muda o tamanho da imagem para que ela seja sempre totalmente exibida na tela sem nenhum corte.
+   background-size: contain; -> Redimensiona a imagem para que ela cubra o contêiner mesmo que ocorra alguns cortes.
+
+   -> Ultima propriedade é o vínculo (attachment) da imagem de fundo com o resto do documento, principalmente se o conteudo for maior que a altura da página e seja necessario uma rolagem vertical. Aceita os valores:
+   background-attachment: scroll; -> padrão a imagem de fundo vai rolar junto com o conteudo.
+   background-attachment: fixed; -> A imagem de fundo vai ficar fixada enquanto o conteúdo vai sendo rolado.
+
+   SHORTHAND!
+   -> A propriedade abreviada background pode ser declarada na ordem:
+   background-color
+   background-image
+   background-position
+   background-repeat
+   background-attachment
+
+   -> Ou seja no lugar de usar:
+   background-color: black;
+   background-image: url('imagens/wallpaper002.jpg');
+   background-position: center center;
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+
+   -> Reunimos tudo em uma única declaração:
+   background: black url('imagens/wallpaper002.jpg') center center no-repeat fixed;
+
+   Centralização vertical em contêiners:
+   -> Aprendemos centralizar horizontalmente (margin: auto;), mas como centralizar verticalmente?
+    EXEMPLO NA MESMA PASTA: ex-centralização-vertical.html 
+
+   Objetivo de um bloco com posicionamento absoluto é que podemos personalizar sua posição exata, através da propriedade left e top. Como queremos centralizados vamos configurar os dois na metade do contêiner.

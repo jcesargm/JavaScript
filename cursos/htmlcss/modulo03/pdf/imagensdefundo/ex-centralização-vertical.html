@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* objetivo é deixar o retângulo interno no meio do retângulo externo.
+        
+        Objetivo de um bloco com posicionamento absoluto é que podemos personalizar sua posição exata, através da propriedade left e top. Como queremos centralizados vamos configurar os dois na metade do contêiner.
+        */
+        div#fora {
+            height: 96vh;
+            background-color: purple;
+
+            position: relative;
+        }
+        div#dentro {
+            height: 200px;
+            width: 300px;
+            background-color: yellow;
+            
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%); /*moverá o retangulo para esquerda e pra cima*/
+        }
+    </style>
+</head>
+<body>
+    <div id="fora">
+        <div id="dentro">
+
+        </div>
+    </div>
+</body>
+</html>
