@@ -1,2 +1,2 @@
-# HTML & CSS
-Cursos e Sites de HTML com CSS
+# HTML, CSS & JavaScript
+Cursos e Sites de HTML, CSS e JavaScript
